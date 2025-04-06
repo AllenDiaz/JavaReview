@@ -1,14 +1,20 @@
 public class Main {
     public static void main(String[] args) {
 
-        // constuctor  = A special method to initialize object
-        //               you can pass agrument to constructor
-        //               and  set up initial values
+        /* 
+         * overloaded constructor = Allow a class to have multiple constructor
+         *                          with different paramete lists.
+         *                          Enable objects to be initialized in various ways.
+         */
 
-        Student student = new Student("Allen", 25, 2);
-        System.out.println(student.name);
-        System.out.println(student.age);
-        System.out.println(student.gpa);
-        System.out.println(student.isEnrolled);
+        User user1 = new User("Spongebob") ;
+        User user2 = new User("allen", "allen.developer@gmail.com");
+
+        System.out.println(user1.username);
+        System.out.println(user1.email);
+        System.out.println(user1.age);
+        System.out.println(user2.username);
+        System.out.println(user2.email);
+        System.out.println(user2.age);
     }
 }
