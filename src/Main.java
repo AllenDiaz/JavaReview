@@ -2,17 +2,17 @@ public class Main {
     public static void main(String[] args) {
 
     /* 
-     * Super = Refers to the parent class ( subclass <- superclass)
-     * used in constructor and method overriding 
-     * calls the parent constructor to initialize attributes
+     *  Method overriding = When a subclass provides its own implementation
+     * of a method that is very defined allows for code reusability and give
+     * specific implementations
      */
-    Person person = new Person("Allen", "Diaz");
-    Student student = new Student("Allen", "Diaz", 5);      
-    Employee employee = new Employee("Lebron", "James", 1);
+  
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+        Fish fish = new Fish();
 
-    person.showName();
-    student.showGPA();
-    employee.showSalary();
-
+        cat.move();
+        dog.move();
+        fish.move();
     }
 }
