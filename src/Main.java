@@ -1,25 +1,29 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-
         /* 
-         * Polymorphism = "Poly" = "Many"
-         *                 "Morph" = "Shape"
-         *                 Object can identify as other objects.
-         *                 Object can be treated as objects of a common superclass
+         * Runtime polymorphism = when the method that gets the executed is decided at runtime based
+         * on the actual type of the object
          */
-
-         Bike bike = new Bike();
-         Car car = new Car();
-         Boat boat = new Boat();
         
-        //  car.go();
-        //  bike.go();
-        //  boat.go();
+         Scanner scanner = new Scanner(System.in);
+        
+         Animal animal;
 
-         Vehicle[] vehicles = {car, bike, boat};
+        System.out.print("Would you like a dog or a cat? (1 = dog, 2 = cat)");
+        int choice = scanner.nextInt();
 
-         for(Vehicle vehicle : vehicles) {
-            vehicle.go();
-         }
+        if(choice == 1) {
+            animal = new Dogs();
+            animal.speak();
+        }
+        else if(choice == 2) {
+            animal = new Cat();
+            animal.speak();
+        }
+        else {
+            System.out.println("Invalid Input");
+        }
         }
 }
